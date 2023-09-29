@@ -43,6 +43,7 @@ import { useScreenVariants as useScreenVariantsm7DfCoXpX3H } from "./PlasmicGlob
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
+import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_first_industrial_bank.module.css"; // plasmic-import: afW6VKi63uhPvxynGzSkb1/projectcss
 import sty from "./PlasmicAbout.module.css"; // plasmic-import: 7I3VJX_4Az0Z/css
 
@@ -132,6 +133,7 @@ function PlasmicAbout__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
+            plasmic_antd_5_hostless_css.plasmic_tokens,
             sty.root
           )}
         >

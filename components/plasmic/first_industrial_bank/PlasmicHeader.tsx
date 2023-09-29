@@ -45,6 +45,7 @@ import { useScreenVariants as useScreenVariantsm7DfCoXpX3H } from "./PlasmicGlob
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
+import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_first_industrial_bank.module.css"; // plasmic-import: afW6VKi63uhPvxynGzSkb1/projectcss
 import sty from "./PlasmicHeader.module.css"; // plasmic-import: XXScvUgQS8Qh/css
 
@@ -176,6 +177,7 @@ function PlasmicHeader__RenderFunc(props: {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
+        plasmic_antd_5_hostless_css.plasmic_tokens,
         sty.root,
         {
           [sty.rootmenuOpen]: hasVariant($state, "menuOpen", "menuOpen"),
@@ -197,6 +199,11 @@ function PlasmicHeader__RenderFunc(props: {
       >
         <div
           className={classNames(projectcss.all, sty.freeBox__gjTm, {
+            [sty.freeBoxmenuOpen__gjTmTeSwf]: hasVariant(
+              $state,
+              "menuOpen",
+              "menuOpen"
+            ),
             [sty.freeBoxmenuOpen_signedIn__gjTmTeSwfDSOz3]:
               hasVariant($state, "signedIn", "signedIn") &&
               hasVariant($state, "menuOpen", "menuOpen"),

@@ -55,7 +55,7 @@
   padding: 0px;
 }
 .rootcolor_blue {
-  background: #0091ff;
+  background: #0073cf;
 }
 .rootcolor_green {
   background: #30a46c;
@@ -64,7 +64,7 @@
   background: #f5d90a;
 }
 .rootcolor_red {
-  background: #e54d2e;
+  background: #dc1431;
 }
 .rootcolor_sand {
   background: #717069;
@@ -108,6 +108,9 @@
 }
 .rootsize_compact_shape_round {
   padding: 6px;
+}
+.rootghost_color_blue {
+  border-color: var(--token-z5jrjsGJ26EO);
 }
 .rootghost_color_white {
   border-color: var(--token-p410ROcz8t53);
@@ -336,6 +339,9 @@
 }
 .slotTargetChildrenghost {
   color: var(--token-6AMAvIY4vlat);
+}
+.slotTargetChildrenghost_color_blue {
+  color: var(--token-z5jrjsGJ26EO);
 }
 .slotTargetChildrenghost_color_white {
   color: var(--token-p410ROcz8t53);

@@ -17,7 +17,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  background: var(--token--6pE3VWVPcSJ);
+  background: none;
   left: auto;
   top: auto;
   z-index: 1;
@@ -69,7 +69,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: var(--token-mIomZhwWgszJ);
+  color: var(--token-z5jrjsGJ26EO);
   width: auto;
   height: auto;
   max-width: 100%;
@@ -98,7 +98,7 @@
 .svg__on8OP {
   object-fit: cover;
   max-width: 100%;
-  color: var(--token-p410ROcz8t53);
+  color: var(--token-zp5Cyb3wglCh);
   width: var(--token-KXYD7zyjO4Bj);
   height: var(--token-KXYD7zyjO4Bj);
   flex-shrink: 0;
@@ -130,6 +130,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .svgmenuOpen__ieHuDTeSwf {
+    color: var(--token-zp5Cyb3wglCh);
     display: block;
   }
 }
@@ -169,7 +170,7 @@
     bottom: 0;
     width: 100%;
     height: auto;
-    background: var(--token--6pE3VWVPcSJ);
+    background: none;
     padding-top: 60px;
     min-width: 0;
     display: flex;
@@ -236,7 +237,7 @@
   height: 1em;
 }
 .text__weuyY {
-  color: var(--token-p410ROcz8t53);
+  color: var(--token-6AMAvIY4vlat);
 }
 .svg__kAQgI {
   position: relative;
@@ -255,7 +256,7 @@
   height: 1em;
 }
 .text__kGug8 {
-  color: var(--token-p410ROcz8t53);
+  color: var(--token-6AMAvIY4vlat);
 }
 .svg___2CXgT {
   position: relative;
@@ -274,7 +275,7 @@
   height: 1em;
 }
 .text__i7Mpj {
-  color: var(--token-p410ROcz8t53);
+  color: var(--token-6AMAvIY4vlat);
 }
 .svg__weAa {
   position: relative;
@@ -349,7 +350,7 @@
 }
 .text___1Hps {
   padding-right: 0px;
-  color: var(--token-p410ROcz8t53);
+  color: var(--token-zp5Cyb3wglCh);
 }
 .svg__mUaJr {
   position: relative;
@@ -369,7 +370,7 @@
 }
 .text__kultU {
   padding-right: 0px;
-  color: var(--token-p410ROcz8t53);
+  color: var(--token-zp5Cyb3wglCh);
 }
 .svg__yua92 {
   position: relative;
@@ -445,6 +446,9 @@
   padding-right: 0px;
   color: var(--token-p410ROcz8t53);
 }
+.textsignedIn__iGfDUdSOz3 {
+  color: var(--token-zp5Cyb3wglCh);
+}
 .svg__gh0CO {
   position: relative;
   object-fit: cover;
@@ -464,6 +468,9 @@
 .text__kcmD {
   padding-right: 0px;
   color: var(--token-p410ROcz8t53);
+}
+.textsignedIn__kcmDdSOz3 {
+  color: var(--token-zp5Cyb3wglCh);
 }
 .svg___72MPn {
   position: relative;

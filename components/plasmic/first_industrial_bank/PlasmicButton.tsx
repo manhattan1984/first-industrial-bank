@@ -42,6 +42,7 @@ import {
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
+import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_first_industrial_bank.module.css"; // plasmic-import: afW6VKi63uhPvxynGzSkb1/projectcss
 import sty from "./PlasmicButton.module.css"; // plasmic-import: tXjcP5o2LFJ9/css
 
@@ -263,6 +264,7 @@ function PlasmicButton__RenderFunc(props: {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
+        plasmic_antd_5_hostless_css.plasmic_tokens,
         sty.root,
         {
           [sty.root___focusVisibleWithin]: triggers.focusVisibleWithin_root,
@@ -284,6 +286,9 @@ function PlasmicButton__RenderFunc(props: {
           [sty.rootcolor_white]: hasVariant($state, "color", "white"),
           [sty.rootcolor_yellow]: hasVariant($state, "color", "yellow"),
           [sty.rootghost]: hasVariant($state, "ghost", "ghost"),
+          [sty.rootghost_color_blue]:
+            hasVariant($state, "ghost", "ghost") &&
+            hasVariant($state, "color", "blue"),
           [sty.rootghost_color_teal]:
             hasVariant($state, "color", "teal") &&
             hasVariant($state, "ghost", "ghost"),
@@ -433,6 +438,9 @@ function PlasmicButton__RenderFunc(props: {
             "clear"
           ),
           [sty.contentContainerghost]: hasVariant($state, "ghost", "ghost"),
+          [sty.contentContainerghost_color_blue]:
+            hasVariant($state, "ghost", "ghost") &&
+            hasVariant($state, "color", "blue"),
           [sty.contentContainerghost_color_teal]:
             hasVariant($state, "color", "teal") &&
             hasVariant($state, "ghost", "ghost"),
@@ -536,6 +544,9 @@ function PlasmicButton__RenderFunc(props: {
               "yellow"
             ),
             [sty.slotTargetChildrenghost]: hasVariant($state, "ghost", "ghost"),
+            [sty.slotTargetChildrenghost_color_blue]:
+              hasVariant($state, "ghost", "ghost") &&
+              hasVariant($state, "color", "blue"),
             [sty.slotTargetChildrenghost_color_teal]:
               hasVariant($state, "color", "teal") &&
               hasVariant($state, "ghost", "ghost"),

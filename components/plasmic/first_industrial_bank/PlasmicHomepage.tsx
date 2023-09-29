@@ -39,22 +39,26 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Button from "../../Button"; // plasmic-import: tXjcP5o2LFJ9/component
-import MetricItem from "../../MetricItem"; // plasmic-import: rjv3_n7cRqnT/component
-import Feature from "../../Feature"; // plasmic-import: dA1kMAc3QseA/component
-import Testimonial from "../../Testimonial"; // plasmic-import: xGs62Y0exuxy/component
+import Features from "../../Features"; // plasmic-import: cjM9J0kp_zQY/component
 
 import { useScreenVariants as useScreenVariantsm7DfCoXpX3H } from "./PlasmicGlobalVariant__Mobile"; // plasmic-import: _M7DfCOXpX3h/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
+import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_first_industrial_bank.module.css"; // plasmic-import: afW6VKi63uhPvxynGzSkb1/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: SsNqfTXsbW_l/css
 
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: yCyxqbAHHoKJ/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: dIat2o990mPz/icon
-import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: OGQC37hw0Izm/icon
-import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: mqVN4JkWlZix/icon
-import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: ZIF-zbLMFhVY/icon
+import Icon14Icon from "./icons/PlasmicIcon__Icon14"; // plasmic-import: 4e5Ny4sp--8i/icon
+import Icon18Icon from "./icons/PlasmicIcon__Icon18"; // plasmic-import: 9bpY84fvLnfK/icon
+import Icon15Icon from "./icons/PlasmicIcon__Icon15"; // plasmic-import: AVLuChxJURnl/icon
+import Icon19Icon from "./icons/PlasmicIcon__Icon19"; // plasmic-import: 5EgXyzfZsjL2/icon
+import Icon16Icon from "./icons/PlasmicIcon__Icon16"; // plasmic-import: 1OCfuUCiVE5i/icon
+import Icon20Icon from "./icons/PlasmicIcon__Icon20"; // plasmic-import: lAtVJ272mocC/icon
+import Icon17Icon from "./icons/PlasmicIcon__Icon17"; // plasmic-import: XrzkzKkfmDub/icon
+import Icon21Icon from "./icons/PlasmicIcon__Icon21"; // plasmic-import: vEUHatqH1MB5/icon
 
 createPlasmicElementProxy;
 
@@ -69,7 +73,8 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
+  h3?: p.Flex<"h3">;
+  h6?: p.Flex<"h6">;
 };
 
 export interface DefaultHomepageProps {}
@@ -129,6 +134,7 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
+            plasmic_antd_5_hostless_css.plasmic_tokens,
             sty.root
           )}
         >
@@ -183,14 +189,14 @@ function PlasmicHomepage__RenderFunc(props: {
                 >
                   <Button
                     className={classNames("__wab_instance", sty.button__vrHFf)}
-                    color={"teal"}
+                    color={"blue"}
                     link={"/signup"}
                   >
                     {"Get Started "}
                   </Button>
                   <Button
                     className={classNames("__wab_instance", sty.button__lalDh)}
-                    color={"teal"}
+                    color={"blue"}
                     ghost={true}
                     link={`/about`}
                   >
@@ -199,10 +205,199 @@ function PlasmicHomepage__RenderFunc(props: {
                 </p.Stack>
               </p.Stack>
             </div>
-            <div className={classNames(projectcss.all, sty.freeBox__uakge)}>
+          </section>
+          <section className={classNames(projectcss.all, sty.section__w7RJ)}>
+            <div className={classNames(projectcss.all, sty.freeBox___898Rf)}>
+              <Features
+                className={classNames("__wab_instance", sty.features__mnWt0)}
+              />
+
+              <Features
+                className={classNames("__wab_instance", sty.features___6Xp53)}
+                slot={"Auto Loans"}
+              >
+                <Icon18Icon
+                  className={classNames(projectcss.all, sty.svg__cs99U)}
+                  role={"img"}
+                />
+              </Features>
+              <Features
+                className={classNames("__wab_instance", sty.features__rpwNj)}
+                slot={"Savings & CDs"}
+              >
+                <Icon15Icon
+                  className={classNames(projectcss.all, sty.svg__fea1Q)}
+                  role={"img"}
+                />
+              </Features>
+              <Features
+                className={classNames("__wab_instance", sty.features__wgA1)}
+                slot={"Small Business"}
+              >
+                <Icon19Icon
+                  className={classNames(projectcss.all, sty.svg__vv4Mo)}
+                  role={"img"}
+                />
+              </Features>
+              <Features
+                className={classNames("__wab_instance", sty.features___04Cfp)}
+                slot={"Credit Cards"}
+              >
+                <Icon16Icon
+                  className={classNames(projectcss.all, sty.svg___5KxHb)}
+                  role={"img"}
+                />
+              </Features>
+              <Features
+                className={classNames("__wab_instance", sty.features__kb2Y)}
+                slot={"Investing"}
+              >
+                <Icon20Icon
+                  className={classNames(projectcss.all, sty.svg__f9WPy)}
+                  role={"img"}
+                />
+              </Features>
+              <Features
+                className={classNames("__wab_instance", sty.features__h0ObR)}
+                slot={"Home Loans"}
+              >
+                <Icon17Icon
+                  className={classNames(projectcss.all, sty.svg__lFtNt)}
+                  role={"img"}
+                />
+              </Features>
+              <Features
+                className={classNames("__wab_instance", sty.features__mEsTg)}
+                slot={"Student Banking"}
+              >
+                <Icon21Icon
+                  className={classNames(projectcss.all, sty.svg__mFt8F)}
+                  role={"img"}
+                />
+              </Features>
+            </div>
+          </section>
+          <section className={classNames(projectcss.all, sty.section__qF44Q)}>
+            <h3
+              data-plasmic-name={"h3"}
+              data-plasmic-override={overrides.h3}
+              className={classNames(
+                projectcss.all,
+                projectcss.h3,
+                projectcss.__wab_text,
+                sty.h3
+              )}
+            >
+              {"Financial guidance for every stage of life."}
+            </h3>
+            <div className={classNames(projectcss.all, sty.freeBox__un3FP)}>
+              <div className={classNames(projectcss.all, sty.freeBox__fsEit)}>
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__yPl4)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"100%"}
+                  loading={"lazy"}
+                  src={
+                    "https://www1.bac-assets.com/homepage/spa-assets/images/assets-images-site-homepage-bmh-module-default-education-ent_edu_bac_5806145_608_en_gc_01-CSX2861d8b8.jpg"
+                  }
+                />
+
+                <div className={classNames(projectcss.all, sty.freeBox__nwfkQ)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__oIgSf)}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img___8Ff4)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={
+                        "https://www1.bac-assets.com/homepage/spa-assets/images/assets-images-site-homepage-icons-ent_edu_bac_5449395_icon_gc_a-CSXc8677456.svg"
+                      }
+                    />
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__a5Yl7
+                    )}
+                  >
+                    {"Pay off credit card debts faster"}
+                  </div>
+                </div>
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__rWiLe
+                )}
+              >
+                {"Explore more topics and build your financial know\u2011how."}
+              </div>
+              <Button
+                className={classNames("__wab_instance", sty.button___7LnKk)}
+                color={"blue"}
+                shape={"sharp"}
+              >
+                {"Visit Better Money Habits"}
+              </Button>
+            </div>
+          </section>
+          <section className={classNames(projectcss.all, sty.section__aGw9I)}>
+            <h4
+              className={classNames(
+                projectcss.all,
+                projectcss.h4,
+                projectcss.__wab_text,
+                sty.h4__xY4M
+              )}
+            >
+              {"Your news and information"}
+            </h4>
+            <h4
+              className={classNames(
+                projectcss.all,
+                projectcss.h4,
+                projectcss.__wab_text,
+                sty.h4__nMaG
+              )}
+            >
+              {"Level up your account security"}
+            </h4>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__zqyj3
+              )}
+            >
+              {
+                "Watch your security meter rise as you take action against fraud. See it in the Security Center in Mobile and Online Banking."
+              }
+            </div>
+            <Button
+              className={classNames("__wab_instance", sty.button__hyhIa)}
+              color={"red"}
+              shape={"sharp"}
+            >
+              {"Check your level"}
+            </Button>
+            <div className={classNames(projectcss.all, sty.freeBox__jj36V)}>
               <p.PlasmicImg
                 alt={""}
-                className={classNames(sty.img__sfyoD)}
+                className={classNames(sty.img__pkzum)}
                 displayHeight={"auto"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
@@ -210,452 +405,163 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinWidth={"0"}
                 displayWidth={"auto"}
                 loading={"lazy"}
-                src={{
-                  src: "/plasmic/first_industrial_bank/images/chartpng.png",
-                  fullWidth: 2360,
-                  fullHeight: 666,
-                  aspectRatio: undefined
-                }}
+                src={
+                  "https://www1.bac-assets.com/homepage/spa-assets/images/assets-images-site-homepage-news-life-services-yni_sec_phone_4657392_e-CSX8c7d2691.webp"
+                }
               />
             </div>
           </section>
-          <section className={classNames(projectcss.all, sty.section__ou7Ro)}>
+          <section className={classNames(projectcss.all, sty.section__hp21)}>
+            <h4
+              className={classNames(
+                projectcss.all,
+                projectcss.h4,
+                projectcss.__wab_text,
+                sty.h4__tDd1G
+              )}
+            >
+              {"Secure, convenient banking with our Mobile app\n"}
+            </h4>
+            <Button
+              className={classNames("__wab_instance", sty.button___0Rf6O)}
+              color={"white"}
+              ghost={true}
+              shape={"sharp"}
+            >
+              {"Explore our app"}
+            </Button>
+            <div className={classNames(projectcss.all, sty.freeBox__jn5IO)}>
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__qIr4E)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={
+                  "https://www1.bac-assets.com/homepage/spa-assets/images/assets-images-site-homepage-news-life-services-yni_sec_phone_4657392_e-CSX8c7d2691.webp"
+                }
+              />
+            </div>
+          </section>
+          <section className={classNames(projectcss.all, sty.section__u7Uvv)}>
             <div
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text___5UqLc
+                sty.text__jQmAj
               )}
             >
-              {"Featured In"}
-            </div>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__xzvU)}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___9Va6B
-                )}
-              >
-                {"Financial Times"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__znfnZ
-                )}
-              >
-                {"Forbes"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__kVdV
-                )}
-              >
-                {"Bloomberg"}
-              </div>
-            </p.Stack>
-          </section>
-          <section className={classNames(projectcss.all, sty.section__qye9S)}>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox___7EXwa)}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___5ULix
-                )}
-              >
-                {"Trusted by Numbers"}
-              </div>
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__mJzLf)}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__sr6Tc
-                  )}
-                >
-                  {
-                    "At First Industrial Bank, our results speak volumes. We are dedicated to delivering exceptional outcomes for our clients, backed by solid performance metrics:"
-                  }
-                </div>
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox___7Rqlq)}
-                >
-                  <MetricItem
+              <React.Fragment>
+                <React.Fragment>{""}</React.Fragment>
+                {
+                  <h6
+                    data-plasmic-name={"h6"}
+                    data-plasmic-override={overrides.h6}
                     className={classNames(
-                      "__wab_instance",
-                      sty.metricItem__lvzJr
+                      projectcss.all,
+                      projectcss.h6,
+                      projectcss.__wab_text,
+                      sty.h6
                     )}
-                  />
-
-                  <MetricItem
-                    className={classNames(
-                      "__wab_instance",
-                      sty.metricItem__yLm3
-                    )}
-                    slot={"Average annual ROI"}
                   >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__oxLyr
-                      )}
-                    >
-                      <React.Fragment>
-                        <React.Fragment>{"12"}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#00CCCC" }}
-                        >
-                          {"%"}
-                        </span>
-                      </React.Fragment>
-                    </div>
-                  </MetricItem>
-                  <MetricItem
-                    className={classNames(
-                      "__wab_instance",
-                      sty.metricItem__jsyu
-                    )}
-                    slot={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__dlHhI
-                        )}
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "#0073CF" }}
                       >
-                        {"client retention rate"}
-                      </div>
-                    }
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__hPlDv
-                      )}
-                    >
-                      <React.Fragment>
-                        <React.Fragment>{"95"}</React.Fragment>
-                        <span
-                          className={
-                            "plasmic_default__all plasmic_default__span"
-                          }
-                          style={{ color: "#00CCCC" }}
-                        >
-                          {"%"}
-                        </span>
-                      </React.Fragment>
-                    </div>
-                  </MetricItem>
-                </p.Stack>
-              </p.Stack>
-            </p.Stack>
-          </section>
-          <section className={classNames(projectcss.all, sty.section__u29Ge)}>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__fdcr0)}
-            >
-              <Feature
-                className={classNames("__wab_instance", sty.feature__gbPnl)}
-              >
-                <Icon6Icon
-                  className={classNames(projectcss.all, sty.svg__x0DJc)}
-                  role={"img"}
-                />
-              </Feature>
-              <Feature
-                className={classNames("__wab_instance", sty.feature__rOnQq)}
-                slot={
-                  "Access a wide range of investment options, from stocks and bonds to cryptocurrencies, creating a balanced and resilient portfolio."
+                        {"Online Banking Service Agreement"}
+                      </span>
+                    </React.Fragment>
+                  </h6>
                 }
-                slot2={"Diverse Portfolio"}
-              >
-                <Icon3Icon
-                  className={classNames(projectcss.all, sty.svg__r1PeU)}
-                  role={"img"}
-                />
-              </Feature>
-              <Feature
-                className={classNames("__wab_instance", sty.feature___17Lct)}
-                slot={
-                  "Stay informed with regular and transparent reports on your portfolio's performance and growth."
-                }
-                slot2={"Transparent Reporting"}
-              >
-                <Icon5Icon
-                  className={classNames(projectcss.all, sty.svg__jShJt)}
-                  role={"img"}
-                />
-              </Feature>
-            </p.Stack>
-          </section>
-          <section
-            className={classNames(projectcss.all, sty.section__hRjx)}
-            id={"about"}
-          >
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__mx9Db)}
-            >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__z1E7H)}
-              >
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__wR7S6)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__fmnCn
-                    )}
-                  >
-                    {"Instant Loans For Investor"}
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___3AnmM
-                    )}
-                  >
-                    {
-                      "Get Access To Loan Up To $50,000 For Platinum Plan and premium plan."
-                    }
-                  </div>
-                </p.Stack>
-              </p.Stack>
-            </p.Stack>
-          </section>
-          <section className={classNames(projectcss.all, sty.section__csAhU)}>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox___6Tv6V)}
-            >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__tv3Sj)}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__s5Uve
-                  )}
-                >
-                  {"Trusted by Thousands"}
-                </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__qptjj
-                  )}
-                >
+                <React.Fragment>
                   {
-                    "Join the ever-growing community of satisfied investors who have chosen First Industrial Bank as their investment partner. "
+                    '\nInvesting in securities involves risks, and there is always the potential of losing money when you invest in securities. You should review any planned financial transactions that may have tax or legal implications with your personal tax or legal advisor.\n\nSecurities products are provided by Merrill Lynch, Pierce, Fenner & Smith Incorporated (also referred to as "MLPF&S", or "Merrill"), a registered broker-dealer, registered investment adviser, '
                   }
-                </div>
-                <p.PlasmicLink
-                  data-plasmic-name={"link"}
-                  data-plasmic-override={overrides.link}
-                  className={classNames(projectcss.all, projectcss.a, sty.link)}
-                  component={Link}
-                  href={`/about`}
-                  platform={"nextjs"}
+                </React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#0073CF" }}
                 >
-                  <Button
-                    className={classNames("__wab_instance", sty.button__yur7)}
-                    color={"teal"}
-                  >
-                    {"Learn More"}
-                  </Button>
-                </p.PlasmicLink>
-              </p.Stack>
-              <div className={classNames(projectcss.all, sty.freeBox___2VA50)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__pjxtg)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/first_industrial_bank/images/phonepng.png",
-                    fullWidth: 576,
-                    fullHeight: 1152,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-            </p.Stack>
-          </section>
-          <section className={classNames(projectcss.all, sty.section__lzpnO)}>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__pXWrx
-              )}
-            >
-              {"Testimonials"}
+                  {"Member SIPC"}
+                </span>
+                <React.Fragment>
+                  {
+                    " layer, and a wholly-owned subsidiary of Bank of America Corporation. MLPF&S makes available certain investment products sponsored, managed, distributed or provided by companies that are affiliates of Bank of America Corporation.\n\nBank of America Private Bank is a division of Bank of America, N.A., Member FDIC and a wholly owned subsidiary of Bank of America Corporation. Trust and fiduciary services are provided by Bank of America, N.A. and U.S. Trust Company of Delaware. Both are indirect subsidiaries of Bank of America Corporation.\n\nInsurance Products are offered through Merrill Lynch Life Agency Inc. (MLLA) and/or Banc of America Insurance Services, Inc., both of which are licensed insurance agencies and wholly-owned subsidiaries of Bank of America Corporation.\n\nBanking, credit card, automobile loans, mortgage and home equity products are provided by Bank of America, N.A. and affiliated banks, Members FDIC and wholly owned subsidiaries of Bank of America Corporation. Credit and collateral are subject to approval. Terms and conditions apply. This is not a commitment to lend. Programs, rates, terms and conditions are subject to change without notice.\n\nInvestment and insurance products:"
+                  }
+                </React.Fragment>
+              </React.Fragment>
             </div>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__y0Ycv)}
-            >
-              <Testimonial
-                className={classNames("__wab_instance", sty.testimonial__xmAn7)}
-                slot={
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__ch58A)}
-                    displayHeight={"30px"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"30px"}
-                    loading={"lazy"}
-                    src={
-                      "https://images.unsplash.com/photo-1553514029-1318c9127859?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80"
-                    }
-                  />
-                }
+            <div className={classNames(projectcss.all, sty.freeBox___1ObbS)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__heGsg
+                )}
               >
-                {
-                  "First Industrial Bank has transformed the way I view investing. Their strategies have consistently delivered impressive results, giving me the confidence to secure my financial future."
-                }
-              </Testimonial>
-              <Testimonial
-                className={classNames("__wab_instance", sty.testimonial__ciRlL)}
-                slot2={"Michael L."}
-                slot3={"Investor"}
-              >
-                {
-                  "I've been with First Industrial Bank for over three years, and I've seen my investments flourish even in challenging times. Their expertise and commitment are truly remarkable."
-                }
-              </Testimonial>
-              <Testimonial
-                className={classNames("__wab_instance", sty.testimonial__qiOqj)}
-                slot={
-                  <p.PlasmicImg
-                    alt={""}
-                    className={classNames(sty.img__x64Bh)}
-                    displayHeight={"30px"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"30px"}
-                    loading={"lazy"}
-                    src={
-                      "https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                    }
-                  />
-                }
-              >
-                {
-                  "First Industrial Bank has transformed the way I view investing. Their strategies have consistently delivered impressive results, giving me the confidence to secure my financial future."
-                }
-              </Testimonial>
-            </p.Stack>
-          </section>
-          <section className={classNames(projectcss.all, sty.section__l211)}>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__yW2XO)}
-            >
-              <div className={classNames(projectcss.all, sty.freeBox__gpTt)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__pPkm3)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/first_industrial_bank/images/windowpng2.png",
-                    fullWidth: 2260,
-                    fullHeight: 1484,
-                    aspectRatio: undefined
-                  }}
-                />
+                {"Are Not FDIC Insured"}
               </div>
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__rXqsw)}
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__cnQk)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__wDqaN
+                )}
               >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__c4GjM
-                  )}
-                >
-                  {"Ready to Start?"}
-                </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text___17A8J
-                  )}
-                >
-                  {
-                    "Take the first step towards a brighter financial future with First Industrial Bank. Our proven strategies and dedicated team are here to guide you every step of the way."
-                  }
-                </div>
-                <Button
-                  className={classNames("__wab_instance", sty.button___9ZfXc)}
-                  color={"teal"}
-                  link={"/signup"}
-                >
-                  {"Get Started Today"}
-                </Button>
-              </p.Stack>
-            </p.Stack>
+                {"Are Not Bank Guaranteed"}
+              </div>
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__lq9C4)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__rbTsL
+                )}
+              >
+                {"May Lose Value"}
+              </div>
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__rIWp5)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___6FQW
+                )}
+              >
+                {"Are Not Deposits"}
+              </div>
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__tBx8T)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__sf5Mt
+                )}
+              >
+                {"Are Not Insured by Any Federal Government Agency"}
+              </div>
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox___4Phk2)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__nc0M
+                )}
+              >
+                {"Are Not a Condition to Any Banking Service or Activity"}
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -664,15 +570,17 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "link"],
-  link: ["link"]
+  root: ["root", "h3", "h6"],
+  h3: ["h3"],
+  h6: ["h6"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  link: "a";
+  h3: "h3";
+  h6: "h6";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -735,7 +643,8 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    link: makeNodeComponent("link"),
+    h3: makeNodeComponent("h3"),
+    h6: makeNodeComponent("h6"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

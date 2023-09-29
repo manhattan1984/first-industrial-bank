@@ -35,6 +35,10 @@
   --plasmic-token-spacing-60: var(--token-ueizHmjI79l0);
   --token-j2Y19jWC9uKr: 60px;
   --plasmic-token-spacing-61: var(--token-j2Y19jWC9uKr);
+  --token-z5jrjsGJ26EO: #003866;
+  --plasmic-token-blue: var(--token-z5jrjsGJ26EO);
+  --token-zp5Cyb3wglCh: #dc1431;
+  --plasmic-token-red: var(--token-zp5Cyb3wglCh);
 }
 
 .plasmic_tokens {
