@@ -25,13 +25,17 @@ const SignInNavbar = ({ id }: { id: string | undefined }) => {
   const links = [
     { href: `/dashboard/${id}`, title: "Dashboard" },
     {
-      href: `/dashboard/profile/${id}`,
-      title: "Profile",
+      href: `/dashboard/transfer/${id}`,
+      title: "Transfer",
     },
-
+    
     {
       href: `/dashboard/transactionlog/${id}`,
       title: "Transactions",
+    },
+    {
+      href: `/dashboard/profile/${id}`,
+      title: "Profile",
     },
 
     {

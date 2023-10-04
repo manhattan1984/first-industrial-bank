@@ -11,23 +11,21 @@ const SignIn = () => {
 
   const { supabase, session } = useSupabase();
   const emailRef = useRef();
-  const passwordRef = useRef();
+  const otpRef = useRef();
+  const [showOTP, setShowOTP] = useState(false);
 
   const [loading, setLoading] = useState(false);
 
-  const handleEmailLogin = async () => {
+  const sendOTP = async () => {
     setLoading(true);
 
-    const { data: user, error } = await supabase.auth.signInWithPassword({
+    const { data: user, error } = await supabase.auth.signInWithOtp({
       email: emailRef.current.value,
-      password: passwordRef.current.value,
+      options: {
+        shouldCreateUser: false,
+      },
     });
-
-    if (!error) {
-      toast.success("Sign In Successful");
-      router.push(`/dashboard/${user.user.id}`);
-      return;
-    }
+    setShowOTP(true);
 
     if (error instanceof AuthApiError) {
       toast.error(`Failed To sign in. Incorrect login details.`);
@@ -37,8 +35,25 @@ const SignIn = () => {
     setLoading(false);
   };
 
-  const signIn = () => {
-    handleEmailLogin();
+  const signIn = async () => {
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.verifyOtp({
+      email: emailRef.current.value,
+      token: otpRef.current.value,
+      type: "email",
+    });
+
+    if (!error) {
+      toast.success("Sign In Successful");
+      console.log("Tried and Tested.");
+      router.push(`/dashboard/${user.id}`);
+      return;
+    } else {
+      console.log(error);
+      toast.error("Invalid OTP");
+    }
   };
   return (
     <>
@@ -52,37 +67,51 @@ const SignIn = () => {
 
           <div className="">
             <p className="capitalize mb-2 text-sm">Email address</p>
-            <input
-              ref={emailRef}
-              placeholder="Enter your email"
-              className="border w-full p-2 rounded text-sm"
-              type="text"
-            />
+            <div className="flex gap-2">
+              <input
+                ref={emailRef}
+                placeholder="Enter your email"
+                className="border w-full p-2 rounded text-sm"
+                type="text"
+              />
+              <button
+                onClick={() => {
+                  if (emailRef.current.value) {
+                    sendOTP();
+                  }
+                }}
+                className="text-sm text-blue-600"
+              >
+                Send OTP
+              </button>
+            </div>
           </div>
 
-          <div className="">
-            <p className="capitalize mb-2 text-sm">Password</p>
-            <input
-              ref={passwordRef}
-              placeholder="Password"
-              className="border w-full p-2 rounded text-sm"
-              type="password"
-            />
-          </div>
+          {showOTP ? (
+            <div className="">
+              <p className="capitalize mb-2 text-sm">OTP</p>
+              <input
+                ref={otpRef}
+                placeholder="OTP"
+                className="border w-full p-2 rounded text-sm"
+                type="number"
+              />
+            </div>
+          ) : null}
 
-          <div className="w-full flex">
+          {/* <div className="w-full flex">
             <Link
               className="text-blue-900 text-xs w-full text-right"
               href="/forgot-password"
             >
               Forgot Your Password?
             </Link>
-          </div>
+          </div> */}
 
           <button
             onClick={() => signIn()}
             className="bg-blue-900 text-white p-2"
-            disabled={loading}
+            disabled={loading || !showOTP}
           >
             {loading ? (
               <span className="flex justify-center items-center">

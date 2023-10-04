@@ -31,40 +31,19 @@ const Dashboard = ({
         ))}
       </div>
 
-      {/* Deposits */}
-
-      <div className="bg-white rounded p-4 my-4 text-center">
-        <p className="text-left my-2">Latest Active Deposits</p>
-
-        <div className="border grid grid-cols-4 gap-4 text-center text-sm py-2">
-          {/* <p>Ref Id</p> */}
-          <p>Plan Name</p>
-          <p>Amount ($)</p>
-          <p>Date</p>
-          <p>Status</p>
-        </div>
-        {/* <div className="border p-8"> */}
-        {deposits ? (
-          <>
-            {deposits.map((deposit, index) => (
-              <Transaction {...deposit} key={index} />
-            ))}
-          </>
-        ) : (
-          <p>No Active Deposits</p>
-        )}
-        {/* </div> */}
-      </div>
-
       {/* Transactions */}
       <div className="bg-white rounded p-4 my-4">
         <p className="my-2">Latest Transactions</p>
-        <div className="border grid grid-cols-4 gap-4 text-center text-sm py-2">
+        <div className="border grid grid-cols-8 gap-4 text-center text-sm py-2">
           {/* <p>Ref Id</p> */}
-          <p>Plan Name</p>
-          <p>Amount ($)</p>
-          <p>Date</p>
-          <p>Status</p>
+          <p className="text-xs">Date</p>
+          <p className="text-xs">Narration</p>
+          <p className="text-xs">Amount</p>
+          <p className="text-xs">Type</p>
+          <p className="text-xs">Status</p>
+          <p className="text-xs">A/C Number</p>
+          <p className="text-xs">A/C Name</p>
+          <p className="text-xs">Bank</p>
         </div>
         {transactions ? (
           <>
@@ -79,7 +58,10 @@ const Dashboard = ({
             </div>
             <div className="flex-1">
               <p>No Transaction Done</p>
-              <p className="text-xs text-gray-500">05 Feb, 2023</p>
+              <p className="text-xs text-gray-500">
+                {" "}
+                {new Date().toLocaleDateString()}
+              </p>
             </div>
             <p className="text-xs text-gray-500">N/A</p>
           </div>
