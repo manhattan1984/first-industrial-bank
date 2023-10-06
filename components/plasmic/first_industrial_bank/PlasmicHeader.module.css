@@ -36,6 +36,11 @@
     min-width: 0;
   }
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBoxmenuOpen__gHGgUTeSwf {
+    background: #ffffff;
+  }
+}
 .freeBox__gjTm {
   display: flex;
   position: relative;

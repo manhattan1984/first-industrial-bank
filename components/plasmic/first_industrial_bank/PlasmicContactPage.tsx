@@ -70,6 +70,8 @@ export type PlasmicContactPage__OverridesType = {
 
 export interface DefaultContactPageProps {}
 
+const $$ = {};
+
 function useNextRouter() {
   try {
     return useRouter();

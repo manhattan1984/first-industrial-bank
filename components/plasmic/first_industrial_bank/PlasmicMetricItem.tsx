@@ -72,6 +72,8 @@ export interface DefaultMetricItemProps {
   className?: string;
 }
 
+const $$ = {};
+
 function useNextRouter() {
   try {
     return useRouter();

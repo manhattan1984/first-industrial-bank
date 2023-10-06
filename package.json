@@ -15,7 +15,7 @@
     "@headlessui/react": "^1.7.13",
     "@next/font": "13.1.6",
     "@plasmicapp/loader-nextjs": "^1.0.269",
-    "@plasmicapp/react-web": "^0.2.258",
+    "@plasmicapp/react-web": "^0.2.267",
     "@plasmicpkgs/antd5": "^0.0.52",
     "@plasmicpkgs/plasmic-basic-components": "^0.0.143",
     "@plasmicpkgs/plasmic-nav": "^0.0.129",

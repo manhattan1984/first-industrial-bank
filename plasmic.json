@@ -192,6 +192,19 @@
           "cssFilePath": "plasmic/first_industrial_bank/PlasmicFeatures.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "IVn1pTJikmR0",
+          "name": "Unauthorized",
+          "type": "managed",
+          "projectId": "afW6VKi63uhPvxynGzSkb1",
+          "renderModuleFilePath": "plasmic/first_industrial_bank/PlasmicUnauthorized.tsx",
+          "importSpec": {
+            "modulePath": "../app/unauthorized/page.tsx"
+          },
+          "cssFilePath": "plasmic/first_industrial_bank/PlasmicUnauthorized.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -304,6 +317,11 @@
           "id": "vEUHatqH1MB5",
           "name": "Icon21Icon",
           "moduleFilePath": "plasmic/first_industrial_bank/icons/PlasmicIcon__Icon21.tsx"
+        },
+        {
+          "id": "LA6v5DJEYpqa",
+          "name": "Icon22Icon",
+          "moduleFilePath": "plasmic/first_industrial_bank/icons/PlasmicIcon__Icon22.tsx"
         }
       ],
       "images": [

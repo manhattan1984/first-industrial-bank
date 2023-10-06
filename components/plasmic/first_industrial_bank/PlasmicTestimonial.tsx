@@ -79,6 +79,8 @@ export interface DefaultTestimonialProps {
   className?: string;
 }
 
+const $$ = {};
+
 function useNextRouter() {
   try {
     return useRouter();

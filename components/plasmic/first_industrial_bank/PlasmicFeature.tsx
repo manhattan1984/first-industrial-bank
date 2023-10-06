@@ -77,6 +77,8 @@ export interface DefaultFeatureProps {
   className?: string;
 }
 
+const $$ = {};
+
 function useNextRouter() {
   try {
     return useRouter();

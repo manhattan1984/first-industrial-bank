@@ -72,6 +72,8 @@ export interface DefaultFooterProps {
   className?: string;
 }
 
+const $$ = {};
+
 function useNextRouter() {
   try {
     return useRouter();

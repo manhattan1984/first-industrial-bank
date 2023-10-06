@@ -34,15 +34,15 @@ const Dashboard = ({
       {/* Transactions */}
       <div className="bg-white rounded p-4 my-4">
         <p className="my-2">Latest Transactions</p>
-        <div className="border grid grid-cols-8 gap-4 text-center text-sm py-2">
+        <div className="border grid grid-cols-8 gap-4  text-sm py-2">
           {/* <p>Ref Id</p> */}
           <p className="text-xs">Date</p>
-          <p className="text-xs">Narration</p>
+          <p className="text-xs truncate">Description</p>
           <p className="text-xs">Amount</p>
           <p className="text-xs">Type</p>
           <p className="text-xs">Status</p>
-          <p className="text-xs">A/C Number</p>
-          <p className="text-xs">A/C Name</p>
+          <p className="text-xs">Acc No.</p>
+          <p className="text-xs">Acc Name</p>
           <p className="text-xs">Bank</p>
         </div>
         {transactions ? (

@@ -29,19 +29,19 @@ const SignInNavbar = ({ id }: { id: string | undefined }) => {
       title: "Transfer",
     },
     
-    {
-      href: `/dashboard/transactionlog/${id}`,
-      title: "Transactions",
-    },
+    // {
+    //   href: `/dashboard/transactionlog/${id}`,
+    //   title: "Transactions",
+    // },
     {
       href: `/dashboard/profile/${id}`,
       title: "Profile",
     },
 
-    {
-      href: `/dashboard/change-password/${id}`,
-      title: "Change Password",
-    },
+    // {
+    //   href: `/dashboard/change-password/${id}`,
+    //   title: "Change Password",
+    // },
   ];
 
   console.log("pathname", pathname?.split("/"));

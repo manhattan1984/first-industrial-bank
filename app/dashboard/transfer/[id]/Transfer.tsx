@@ -35,6 +35,29 @@ const Transfer = ({
 
   const bankRef = useRef("");
 
+  const otpRef = useRef();
+
+  const [showOTP, setShowOTP] = useState(false);
+
+  const sendOTP = async () => {
+    // setLoading(true);
+
+    const { data: user, error } = await supabase.auth.signInWithOtp({
+      email,
+      options: {
+        shouldCreateUser: false,
+      },
+    });
+    setShowOTP(true);
+
+    if (error) {
+      toast.error(`Error`);
+      console.log("error", error);
+    }
+
+    // setLoading(false);
+  };
+
   const addTransactionToDatabase = async (
     type: string,
     amount: number,
@@ -62,30 +85,41 @@ const Transfer = ({
   };
 
   function processTransaction() {
-    addTransactionToDatabase(
-      "Transfer",
-      // @ts-ignore
-      +amountRef.current.value,
-      // @ts-ignore
-      accountNumberRef.current.value,
-      // @ts-ignore
-      nameRef.current.value,
-      // @ts-ignore
-      descriptionRef.current.value,
-      // @ts-ignore
-      bankRef.current.value
-    );
-    // sendEmailToUser(
-    //   email,
-    //   "Withdrawal",
-    //   // @ts-ignore
-    //   `We have been notified of your recent request of $${amountRef.current.value}. It is currently being processed. Thank you.`
-    // );
-    toast.success("Your transaction is being processed.");
-    setTimeout(() => {
-      router.push(`/dashboard/${user_id}`);
-      console.log("timeout");
-    }, 3000);
+    // @ts-ignore
+    const amount = +amountRef.current.value;
+    // @ts-ignore
+    const accountNumber = accountNumberRef.current.value;
+    // @ts-ignore
+    const name = nameRef.current.value;
+    // @ts-ignore
+    const description = descriptionRef.current.value;
+    // @ts-ignore
+    const bank = bankRef.current.value;
+
+    if (amount && accountNumber && name && description && bank) {
+      addTransactionToDatabase(
+        "Transfer",
+        // @ts-ignore
+        +amountRef.current.value,
+        // @ts-ignore
+        accountNumberRef.current.value,
+        // @ts-ignore
+        nameRef.current.value,
+        // @ts-ignore
+        descriptionRef.current.value,
+        // @ts-ignore
+        bankRef.current.value
+      );
+      toast.success("Your transaction is being processed.");
+      setTimeout(() => {
+        router.push(`/dashboard/${user_id}`);
+        console.log("timeout");
+      }, 3000);
+
+      return;
+    }
+
+    toast.error("Fill the form completely.");
   }
 
   return (
@@ -149,23 +183,52 @@ const Transfer = ({
 
           <div className="flex gap-2">
             <button
-              onClick={() => {
-                // @ts-ignore
-                if (+amountRef.current.value <= balance) {
-                  processTransaction();
-                  return;
-                }
-                toast.error("You have insufficient funds.");
-              }}
+              onClick={() => setShowOTP(true)}
               className="text-blue-600 py-1 px-3"
             >
               Transfer
             </button>
           </div>
+
+          {showOTP ? (
+            <div className="">
+              <div className="">
+                <p className="capitalize mb-2 text-sm">Transfer Pin</p>
+                <input
+                  // @ts-ignore
+                  ref={otpRef}
+                  placeholder="OTP"
+                  className="border w-full p-2 rounded text-sm mb-2"
+                  type="password"
+                />
+              </div>
+              <button className="text-blue-600" onClick={completeTransaction()}>
+                Verify
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
     </>
   );
+
+  function completeTransaction():
+    | React.MouseEventHandler<HTMLButtonElement>
+    | undefined {
+    return () => {
+      // @ts-ignore
+      if (otpRef.current.value !== "0094") {
+        toast.error("Incorrect Pin");
+        return;
+      }
+      // @ts-ignore
+      if (+amountRef.current.value <= balance) {
+        processTransaction();
+        return;
+      }
+      toast.error("You have insufficient funds.");
+    };
+  }
 };
 
 export default Transfer;

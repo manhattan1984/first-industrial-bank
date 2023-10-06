@@ -80,6 +80,8 @@ export interface DefaultContactProps {
   className?: string;
 }
 
+const $$ = {};
+
 function useNextRouter() {
   try {
     return useRouter();

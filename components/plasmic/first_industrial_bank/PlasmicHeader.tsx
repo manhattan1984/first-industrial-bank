@@ -93,6 +93,8 @@ export interface DefaultHeaderProps {
   className?: string;
 }
 
+const $$ = {};
+
 function useNextRouter() {
   try {
     return useRouter();
@@ -437,6 +439,11 @@ function PlasmicHeader__RenderFunc(props: {
             as={"div"}
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__qm3U3, {
+              [sty.freeBoxmenuOpen__qm3U3TeSwf]: hasVariant(
+                $state,
+                "menuOpen",
+                "menuOpen"
+              ),
               [sty.freeBoxsignedIn__qm3U3DSOz3]: hasVariant(
                 $state,
                 "signedIn",
@@ -476,6 +483,11 @@ function PlasmicHeader__RenderFunc(props: {
             </Button>
             <Button
               className={classNames("__wab_instance", sty.button__uxfXy, {
+                [sty.buttonmenuOpen__uxfXyTeSwf]: hasVariant(
+                  $state,
+                  "menuOpen",
+                  "menuOpen"
+                ),
                 [sty.buttonsignedIn__uxfXydSOz3]: hasVariant(
                   $state,
                   "signedIn",

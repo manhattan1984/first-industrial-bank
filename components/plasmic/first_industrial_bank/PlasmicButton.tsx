@@ -158,6 +158,8 @@ export interface DefaultButtonProps extends pp.BaseButtonProps {
   ghost?: SingleBooleanChoiceArg<"ghost">;
 }
 
+const $$ = {};
+
 function useNextRouter() {
   try {
     return useRouter();

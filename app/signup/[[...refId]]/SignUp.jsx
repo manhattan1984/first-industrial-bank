@@ -194,7 +194,7 @@ const SignUp = ({ referral_id }) => {
           </div>
           <button
             type="submit"
-            disabled={true}
+            disabled={loading}
             onClick={handleSignUp}
             className="bg-blue-900 text-white p-2 uppercase"
           >

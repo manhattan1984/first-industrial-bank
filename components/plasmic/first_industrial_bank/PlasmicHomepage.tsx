@@ -79,6 +79,8 @@ export type PlasmicHomepage__OverridesType = {
 
 export interface DefaultHomepageProps {}
 
+const $$ = {};
+
 function useNextRouter() {
   try {
     return useRouter();
