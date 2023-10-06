@@ -187,7 +187,7 @@ function PlasmicContactPage__RenderFunc(props: {
                       href={"mailto:support@aquamining.com"}
                       platform={"nextjs"}
                     >
-                      {"support@firstindustrialbank.com"}
+                      {"firstindustrialbank@gmail.com"}
                     </p.PlasmicLink>
                   }
                   slot3={"Email Us"}
