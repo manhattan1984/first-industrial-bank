@@ -17,21 +17,14 @@ export default async function DashboardLayout({
     data: { session },
   } = await supabase.auth.getSession();
 
-  const {
-    data: {casted},
-    error,
-  } = await supabase.from("profiles").select("*").eq("id", id).single();
-
-  console.log("casted", casted);
+ 
   
 
   if (!session) {
     redirect("/signin");
   }
 
-  if (casted) {
-    redirect("/unauthorized");
-  }
+ 
 
   return (
     <section className="bg-gray-100">

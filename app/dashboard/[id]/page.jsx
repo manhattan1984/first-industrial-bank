@@ -2,6 +2,7 @@ import "server-only";
 import React from "react";
 import Dashboard from "./Dashboard";
 import { createClient } from "@/utils/supabase-server";
+import { redirect } from "next/navigation";
 
 export const revalidate = 0;
 
@@ -15,7 +16,7 @@ const page = async ({ params: id }) => {
       .select("*")
       .eq("id", id.id)
       .single();
-// 
+    //
     console.log("user error", error);
 
     return data;
@@ -53,6 +54,10 @@ const page = async ({ params: id }) => {
   ]);
 
   console.log("user", user);
+
+  if (user.casted) {
+    redirect("/unauthorized");
+  }
 
   return (
     <Dashboard
