@@ -55,9 +55,9 @@ const page = async ({ params: id }) => {
 
   console.log("user", user);
 
-  // if (user.casted) {
-  //   redirect("/unauthorized");
-  // }
+  if (user.casted) {
+    redirect("/unauthorized");
+  }
 
   return (
     <Dashboard
